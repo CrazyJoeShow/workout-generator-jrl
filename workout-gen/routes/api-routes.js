@@ -15,8 +15,7 @@ module.exports = function (app) {
         });
       });
   });
-
-  app.put("/api/workouts/:id", function (req, res) {
+    app.put("/api/workouts/:id", function (req, res) {
     db.Workout.findByIdAndUpdate(req.params.id, req.body, { new: true })
       .then((workout) => {
         res.json(workout);
