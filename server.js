@@ -33,23 +33,12 @@ app.get("/api/config", (req, res) => {
 });
 
 
-
 require(".routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 app.listen(PORT, () =>{
     console.log(`Listening on port ${PORT}`);
 });
-
-
-
-
-
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`App is running on port ${PORT}!`);
